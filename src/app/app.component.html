@@ -1,0 +1,87 @@
+
+<div class="container">
+  <h1 class="p-3 mb-2 bg-dark text-white">ASSIGNMENT</h1>
+  <div class="blurred-boxr">
+  <table class="table table_blur  table-bordered table-striped">
+    <thead class="gradient-custom">
+      <tr>
+        <th>ID</th>
+        <th>EMAIL</th>
+        <th>FNAME</th>
+        <th>LNAME</th>
+        <th>DETAILS</th>
+        <th colspan="3">MOD</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pos of common">
+        <td>{{pos.id}}</td>
+        <td>{{pos.email}}</td>
+        <td>{{pos.first_name}}</td>
+        <td>{{pos.last_name}}</td>
+        <td>{{pos.avatar}} </td>
+        <td>
+          <button type="button"
+                  class="btn btn-danger text-white"
+                  (click)="delete(pos.id)">
+            DELETE
+          </button>
+        </td>
+        <td>
+          <button type="button"
+                  class="btn btn-success text-white"
+                  (click)="getid(pos.id)">
+            EDIT
+          </button>
+        </td>
+        <td>
+        <button type="button"
+                class="btn btn-dark bg-dark text-white"
+                [disabled]="form.invalid"
+                (click)="patch(pos.id)">
+          UPDATE
+        </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+    </div>
+</div>
+<div class="container">
+  <form class="row g-3 needs-validation" #form="ngForm">
+    <div class="form-group">
+      <label>id</label>
+      <input name="id" #id [(ngModel)]="post3.id" class="form-control" required />
+    </div>
+   <!-- <span>{{id.className}}</span>-->
+    <div class="form-group">
+      <label>email</label>
+      <input name="email" #email [(ngModel)]="post3.email" class="form-control" required />
+    </div>
+    <div class="form-group">
+      <label>first_name</label>
+      <input name="fname" #first_name [(ngModel)]="post3.first_name" class="form-control" required />
+    </div>
+    <div class="form-group">
+      <label>last_name</label>
+      <input name="lname" #last_name [(ngModel)]="post3.last_name" class="form-control" required />
+    </div>
+    <div class="form-group">
+      <label>avatar</label>
+      <input name="avatar" #avatar [(ngModel)]="post3.avatar" class="form-control" required />
+    </div>
+    <div class="container">
+    <button type="button"
+            class="btn btn-dark bg-dark text-white"
+            [disabled]="form.invalid"
+            (click)="create()">
+      CREATE
+    </button>
+      </div>
+
+  </form>
+</div>
+<!--<div>
+  <a class="text-danger">{{createdata |json}}</a>
+  <a>{{message |json}}</a>
+</div>-->

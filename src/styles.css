@@ -1,0 +1,104 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  background-image: url(http://bit.ly/2gPLxZ4);
+  background-attachment: fixed;
+  background-size: cover;
+}
+.container {
+  background-image: url("https://images.unsplash.com/photo-1542242476-5a3565835a38?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80");
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body, .wrapper {
+  height: 10%;
+}
+
+body {
+  background-image: url("https://images.unsplash.com/photo-1449156733864-dd5471bb7427?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1500&q=80");
+  background-color: #cccccc;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.table_blur {
+  background: #f5ffff;
+  border-collapse: collapse;
+  text-align: left;
+  width: auto;
+  margin-left: auto;
+  margin-top: auto;
+  margin-right:auto
+}
+
+  .table_blur th {
+    border-top: 1px solid #777777;
+    border-bottom: 1px solid #777777;
+    box-shadow: inset 0 1px 0 #999999, inset 0 -1px 0 #999999;
+    background: linear-gradient(#160303, #5a567f);
+    color: white;
+    padding: 10px 15px;
+    position: relative;
+  }
+
+    .table_blur th:after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 25%;
+      height: 25%;
+      width: 50%;
+      background: linear-gradient(rgba(255, 255, 255, 0), rgba(255,255,255,.08));
+    }
+
+  .table_blur tr:nth-child(odd) {
+    background: #ebf3f9;
+  }
+
+  .table_blur th:first-child {
+    border-left: 1px solid #777777;
+    border-bottom: 1px solid #777777;
+    box-shadow: inset 1px 1px 0 #999999, inset 0 -1px 0 #999999;
+  }
+
+  .table_blur th:last-child {
+    border-right: 1px solid #777777;
+    border-bottom: 1px solid #777777;
+    box-shadow: inset -1px 1px 0 #999999, inset 0 -1px 0 #999999;
+  }
+
+  .table_blur td {
+    border: 1px solid #e3eef7;
+    padding: 10px 15px;
+    position: relative;
+    transition: all 0.5s ease;
+  }
+
+  .table_blur tbody:hover td {
+    color: transparent;
+    text-shadow: 0 0 3px #a09f9d;
+  }
+
+  .table_blur tbody:hover tr:hover td {
+    color: #444444;
+    text-shadow: none;
+  }
+
+
+
+<!--
+grdient-- >
+.gradient-custom {
+  /* fallback for old browsers */
+  background: #000000;
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(118, 75, 162, 0.5));
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(118, 75, 162, 0.5))
+}
+
